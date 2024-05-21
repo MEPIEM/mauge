@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Restaurante Mexicano "El Sabor"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+      
+</head>
+<body>
+    
+    <header>
+      
+    <header class="header">
+      <div class="container">
+      <div class="btn-menu">
+        <label for="btn-menu">☰</label>
+      </div>
+          <ul>
+        </nav>
+      </div>
+    </header>
+    <div class="capa"></div>
+  <!--	--------------->
+  <input type="checkbox" id="btn-menu">
+  <div class="container-menu">
+    <div class="cont-menu">
+      <nav>
+        <a href="/inicio/">Inicio</a>
+        <a href="/menu">Menu</a>
+        <a href="/contacto">Contacto</a>
+      </nav>
+      <label for="btn-menu">✖️</label>
+    </div>
+  </div>
+
+        <h1 style="text-align: center;">Menú</h1><br>
+        <p style="text-align: center;">Platillos más reconocidos
+          Por supuesto que no podemos dejar de mencionar como parte de los componentes de la gastronomía mexicana a algunos de 
+          los platillos más importantes, gracias a los cuales nuestra cocina ha sido reconocida como patrimonio gastronómico, 
+          algunos de estos son el chile en nogada, indiscutiblemente los tacos, el pozole, el famoso mole, las jugosas carnitas, 
+          la cochinita pibil, entre otros.</p><br>
+    </header>
+    <main>
+      <section class="wrap">
+        <div class="wrap-title-section">
+          <h2 style="text-align: center">DESAYUNOS</h2>
+        </div>
+        <div class="wrap column-2 carta">
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/enchilada.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              <h4 style="text-align: center;"> ENCHILADAS</h4>
+              <p style="text-align: center;">
+                Las enchiladas son tortillas de maíz muy picantes bañadas en salsa y rellenas de cualquier tipo de carne, la carne de res es común. 
+                El plato se sirve con cebolla, lima, lechuga y cilantro. Se parecen a los tacos, pero con la diferencia de que están empapadas de salsa. 
+                Algunas recetas también requieren frijoles o pollo.
+              </p>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$93</span>
+            </div>
+          </div>
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/taco.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              <h4 style="text-align: center">2. Tacos</h4>
+              <p style="text-align: center">Este es uno de los platos más conocidos de México, incluso es posible encontrarlo en diferentes partes del mundo debido a su popularidad.
+                 El taco es una tortilla de maíz rellena con cualquier tipo de alimento, por eso hay de varios sabores. <br>
+                 Los más típicos son los de carne con cebolla, cilantro y salsa picante. Sin embargo, no hay una regla, hay tacos para todos los gustos.
+                  Si vas a las zonas costeras, tendrás la oportunidad de probar los de pescado y camarones.</p>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$78</span>
+            </div>
+          </div> 
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/chilaquiles.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              <h4 style="text-align: center">Chilaquiles</h4>
+              <p style="text-align: center">Los chilaquiles son pequeñas tortillas de maíz triangulares que tienen una salsa picante hecha con chiles rojos o verdes. 
+                Además, se agregan crema agria, cebollas, huevos y queso. Puedes encontrar este plato en los desayunos mexicanos, aunque parece muy abundante para empezar el día.</p><br>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$94</span>
+            </div>
+          </div>
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/chiles.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              <h4 style="text-align: center">Chiles en Nogada</h4>
+              <p style="text-align: center">El chile en nogada es un plato típico de la ciudad de Puebla, pero lo puedes encontrar en muchas partes de México, ya que ha alcanzado nivel nacional. 
+                Esta comida es un chile poblano a la parrilla, relleno de picadillo, cubierto con una rica salsa de crema hecha de nueces, perejil picadito y granos de granada.</p><br>
+            </div>
+            <div class="precio-plato-carta">
+              <span>45</span>
+            </div>
+          </div>    
+        </div>
+        <div class="wrap-title-section">
+          <h2 style="text-align: center">COMIDA</h2>
+        </div>
+        <div class="wrap column-2 carta">
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/cochinita.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              <h4 style="text-align: center">Cochinita Pibil</h4>
+              <p style="text-align: center">La cochinita pibil es otra comida típica de México que no te puedes perder en tu viaje al país. 
+                Este es un plato de la cocina de Yucatán y consiste en carne de cerdo deshebrada, marinada en achiote, zumo de naranja agria, chile habanero, sal y pimienta negra. <br>
+                 Se cocina al horno, dentro de hojas de plátano.</p>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$67</span>
+            </div>
+          </div>
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/mole.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              <h4 style="text-align: center;">Mole</h4>
+              <p style="text-align: center;">El mole es una salsa, pero es una salsa distinta, que se ha convertido en uno de los platos tradicionales mexicanos. 
+                El más conocido es el mole poblano, de Puebla incluso cada mes de junio se realiza el Festival del Mole Poblano. Se elabora con chocolate amargo, diferentes tipos de chile, jitomate, frutos secos, especias, cebolla y ajo.</p> <br>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$80</span>
+            </div>
+          </div> 
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/jamaica.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              <h4 style="text-align: center"> Aguas frescas</h4>
+              <p style="text-align: center">Aunque su elaboración es muy sencilla, nacieron en la época de los aztecas, quienes molían flores o frutas y les agregaban agua a fin de saciar su sed durante los largos viajes que realizaban. 
+                Aunque se pueden elaborar en todo el mundo, hay sabores nacionales que sólo se elaboran aquí y ponen en alto el orgullo, como horchata y jamaica, además de algunas de frutas nacionales como tuna, la verdad es que de todo se puede hacer agua fresca y sus variaciones son interesantes.</p> <br>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$89</span>
+            </div>
+          </div>
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/pulque.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              <h4 style="text-align: center">Pulque</h4>
+              <p style="text-align: center">De origen prehispánico, es considerada la bebida de los dioses. Se obtiene de las pencas de maguey, su consistencia es espesa y viscosa; sin embargo, gracias a su fermentación contiene probióticos, lo que le da un extra de beneficios y ha logrado su popularidad de nuevo. 
+                También se le pueden agregar diferentes sabores para crear curados que tienen una gran popularidad en los estados del centro del país, es tanto su auge que ya la fabrican en lata para conseguir de manera más fácil.</p> <br>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$120</span>
+            </div>
+          </div>   
+        </div>
+        <div class="wrap-title-section">
+         
+          <h2>BEBIDAS</h2>
+          <div class="plato-carta">
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/pulque.jpg" alt="">
+            </div>
+            <div  style="text-align: center"class="title-plato-carta">
+              <h4 style="text-align: center">Pulque</h4>
+              <p style="text-align: center">De origen prehispánico, es considerada la bebida de los dioses. <br>
+                 Se obtiene de las pencas de maguey, su consistencia es espesa y viscosa; sin embargo, gracias a su fermentación contiene probióticos, lo que le da un extra de beneficios y ha logrado su popularidad de nuevo.
+                  También se le pueden agregar diferentes sabores para crear curados que tienen una gran popularidad en los estados del centro del país, es tanto su auge que ya la fabrican en lata para conseguir de manera más fácil.</p>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$89</span>
+            </div>
+            <div class="img-plato-carta">
+              <img src="static/imagenesp/tepache.jpg" alt="">
+            </div>
+            <div class="title-plato-carta">
+              
+             
+
+              <h4 style="text-align: center">Tepache</h4>
+              <p style="text-align: center">Otra bebida prehispánica, cuyo nombre proviene del náhuatl “tepali” que significa “bebida de maíz” y “tepachoa”, que significa molido en piedra. De igual manera se obtiene de la fermentación de la piña y se le agrega piloncillo para dar dulzor. No contiene alcohol como el pulque y se considera una bebida medicinal, útil para contrarrestar malestares digestivos, además de que también es rica en probióticos.</p>
+            </div>
+            <div class="precio-plato-carta">
+              <span>$60</span>
+            </div>
+          </div>
+              
+            </div>
+            </div>
+          </div>   
+        </div>
+      </section>
+      <h2>POSTRES</h2>
+      <div class="wrap column-2 carta">
+        <div class="plato-carta">
+          <div class="img-plato-carta">
+            <img src="static/imagenesp/loretas.avif" alt="">
+          </div>
+          <img src="static/imagenesp/churros.jpg" width="26% ">
+          <div class="title-plato-carta">
+            
+            
+            <h4 style="text-align: center">Torrejas para un dulce y tradicional desayuno</h4>
+            <p style="text-align: center">Las torrejas tradicionales se parecen mucho a las famosas french toast y no es más que pan pasado por leche y frito. 
+              Este pan se acompaña con un almíbar casero y en RecetasGratis.net te detallemos la receta paso a paso para que disfrutes de este plato tradicional.</p><br>
+          </div>
+          
+          <div class="precio-plato-carta">
+           
+            <span>$30</span>
+          </div>
+        </div>
+        <div class="plato-carta">
+          <div class="img-plato-carta">
+            <img src="static/imagenesp/elote.jpg" alt="">
+          </div>
+          <div class="title-plato-carta">
+            <h4 style="text-align: center">Pan de Elote</h4>
+            <p style="text-align: center">El pan de elote es un plato típico de la gastronomía mexicana. Después de definirse las técnicas de la repostería en la cultura mexicana mediante la conquista de los españoles, se tomó la decisión de añadir un ingrediente especial: el maíz. 
+              De esta manera, puedes preparar un pan delicioso.</p><br>
+          </div>
+          <div class="precio-plato-carta">
+            <span>$59</span>
+          </div>
+        </div> 
+        <div class="plato-carta">
+          <div class="img-plato-carta">
+            <img src="static/imagenesp/buñuelos.jpg">
+          </div>
+          <div class="title-plato-carta">
+            <h4 style="text-align: center">Buñuelos</h4>
+            <p style="text-align: center">Los buñuelos se hicieron muy populares en México durante la época de la conquista y la manera de prepararlos cambió, ya que se comenzó a sustituir el aceite de oliva por la manteca.
+               El sabor tradicional de los buñuelos es a base de azúcar con canela. <br> Este postre típico es una tortilla grande dorada que, cabe destacar, está presente en diferentes países y cada uno tiene una historia y una manera de prepararse.</p>
+          </div>
+          <div class="precio-plato-carta">
+            <span>$40</span>
+          </div>
+        </div>
+        <div class="plato-carta">
+          <div class="img-plato-carta">
+            <img src="static/imagenesp/buñuelos.jpg" >
+          </div>
+          <div class="title-plato-carta">
+            <h4 style="text-align: center">Churros</h4>
+            <p style="text-align: center">Los churros existen dos teorías sobre el establecimiento del postre de churros, la primera indica que fueron exportados desde China hacia Europa; la segunda teoría indica que los españoles son responsables de su creación.
+               Los churros consisten en una masa de harina de trigo, agua, sal y azúcar, que se incluyen en un aparato similar a una manga repostera por donde brotan unas tiras en forma de estrella que se fríen en aceite. Los puedes rellenar con azúcar, con crema de pastelería o chocolate.</p>
+          </div>
+          <div class="precio-plato-carta">
+
+
+            <span>$30</span>
+          </div>
+        </div>   
+      </div>
+    </main>
+    
+</body>
+</html>

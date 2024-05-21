@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - Restaurante Mexicano "El Sabor"</title>
+    <style>
+        body {
+	
+	font-family: "Courier New",monospace;
+
+            background-color: #fff8e1;
+            color: #4e342e;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        .address {
+            margin-bottom: 2rem;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+        *{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	body{
+		background: url(https://25.media.tumblr.com/969ce47d2179bde5ab4c68db8d10edc6/tumblr_mjni6yJ0Wj1ruiypso1_500.gif);
+		background-size: 1200vw 1200vh;
+		background-repeat: no-repeat;
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 50px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: -9000%;
+		max-width:-2200;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 65px;/*corregir luego*/
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 20px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/
+
+	body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+	text-align: center;
+	font-family: monospace;
+}
+.video1{
+	width: 150px;
+	height: 150px;
+	margin-bottom: 40px;
+}
+.video2{
+	width: 150px;
+	height: 155px;
+	margin-bottom: 40px;
+}
+.video3{
+	width: 150px;
+	height: 170px;
+	margin-bottom: 40px;
+}
+.video4{
+	width: 150px;
+	height: 130px;
+	margin-bottom: 40px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+				<ul>
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+<!--	--------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="/menu">Menu</a>
+			<a href="/contacto">Contacto</a>
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1881.802828452905!2d-96.97734859385373!3d19.
+38622039731865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1716282291061!5m2!1ses-419!2smx"
+width="1600" 
+height="1500"
+center>
+</iframe>
+
+
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <h2>Gstronomia</h2>
+                <p>Viaje a conocer nustra gran variedad</p>
+				<video class="video1"controls >
+					<source src="static/imagenesp/gastronomia.mp4">
+						tu navegador no soporta audio
+					
+					</video>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Atencion</h2>
+                <p>Top de los mejores platillos</p>
+				<video class="video2"controls >
+					<source src="static/imagenesp/top.mp4">
+						tu navegador no soporta audio
+					
+					</video>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Recomendacion de platillos</h2>
+                <p>Recomendaciones</p>
+				<video class="video3"controls >
+					<source src="static/imagenesp/recomendacion.mp4">
+						tu navegador no soporta audio
+					
+					</video>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Platillo importante</h2>
+                <p>Preparacion de enchiladas</p>
+				<video class="video4"controls >
+					<source src="static/imagenesp/Preparacion.mp4">
+						tu navegador no soporta audio
+					
+					</video>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

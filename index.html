@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Mexicano</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e28350;
+            color: #f4f2f1; 
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        p {
+font-family: "Courier New",monospace;
+}
+        .p1{
+          text-align: center;
+         font-family: "Courier New",monospace;
+        }
+        header {
+            background-color: #a85f3a;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #448fff;
+            padding: 0.5rem;
+        }
+        nav a {
+            margin: 0 1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        footer {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        
+.hover:hover {
+  --_i: 100%;
+  color: #CC333F;
+  transition: .3s, -webkit-mask-size .3s .3s;
+}
+
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  align-items: center;
+}
+h3 {
+  font-family: system-ui, sans-serif;
+  font-size: 4rem;
+  margin:0;
+  cursor: pointer;
+  padding: 0 .1em;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	body{
+		background: url(static/imagenesp/fondo.jpg) ;
+		background-size: 100vw 120vh;
+		background-repeat: no-repeat;
+	}
+
+    
+
+    /*Estilos para el encabezado*/
+	
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+/*Fin de Menù lateral*/
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <header class="header">
+        <div class="container">
+        <div class="btn-menu">
+          <label for="btn-menu">☰</label>
+        </div>
+            <ul>
+          </nav>
+        </div>
+      </header>
+      <div class="capa"></div>
+    <!--	--------------->
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+      <div class="cont-menu">
+        <nav>
+          <a href="/inicio/">Inicio</a>
+          <a href="/menu">Menu</a>
+          <a href="/contacto">Contacto</a>
+        </nav>
+        <label for="btn-menu">✖️</label>
+      </div>
+    </div>
+  
+
+
+    <header>
+        <h3 class="hover">Restaurante Mexicano "El Sabor</h3>
+        
+    </header>
+    <nav>
+        <a href="/inicio">Inicio</a>
+        <a href="/menu">Menú</a>
+        <a href="/ubicacion">Ubicación</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+    <main>
+        <h2 style="text-align: center">¡Bienvenidos a El Sabor!</h2>
+        <p style="text-align: center">Disfruta de la mejor comida mexicana en un ambiente auténtico y acogedor.</p>
+        <p style="text-align: center">El sabor abre sus puertas en el año 2024, siendo parte en la creacion de platillos tipicos mexicanos. <br>
+            Actualmente cuenta con una sucursal en coatepec, somos unos de los restaurantes en acenso mas prometedores, que desean expandirse a mayor parte de la republica,
+            contando con grandes variedades de platillos que se mostraran en la pagina de menu, asi mismo con diferentes bebidas y postres que puedes verificar en nuestro catalogo.
+        </p> <img src="static/imagenesp/image.jpg" width="10%">
+        <p>SU HISTORIA.
+            Hablar de los países con las mejores comidas es tener que incluir a la gastronomía mexicana como una de las más 
+            reconocidas. Entre los muchos atributos con los que cuenta nuestro país, destaca sin lugar a dudas lo exquisita 
+            que es nuestra comida, la variedad de nuestros ingredientes y la importancia de nuestros platillos como parte de 
+            nuestra tradición, de nuestra herencia mexicana.
+            
+            Como buena parte de las tradiciones en México, la gastronomía mexicana también tiene su origen en la época 
+            prehispánica, específicamente de las cultura maya y azteca.<br> 
+            Y es que las variedades y exquisiteces que reinan en nuestra cocina, anteriormente giraban en torno al ingrediente rey, el maíz. 
+            
+           <p class="p1"> 
+            nuestra tradición culinaria local se vio aún más enriquecida con la llegada de productos provenientes de Europa. 
+            Cereales, como el trigo y el arroz fueron los más importantes; también, el ganado ovino y vacuno, carne de pollo, 
+            cerdo y otros derivados, y especias desconocidas hasta el momento para los mexicanos de la época como la pimienta 
+            negra y el orégano, llegaron de lejos para ser parte de la gran familia de ingredientes que harían gala de la nueva 
+            gastronomía mexicana.  Con estos ingredientes presentes en la mesa, nace la cultura culinaria tan reconocida en México.
+          </p> 
+    
+          </main>
+    <footer>
+        <p>&copy; 2024 Restaurante Mexicano "El Sabor". Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
